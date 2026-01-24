@@ -16,12 +16,12 @@ pip install -r requirements.txt
 
 ```md
 
-## Data
+## Data (Demo: Covertype)
 
+The demo notebook is written for the **Covertype** dataset (UCI / sklearn `fetch_covtype`-style tabular data).
 This repository does NOT include datasets.
 
 Place your dataset at:
-
 - `data/train.csv`
 
 ### Dataset format assumptions (CSV)
@@ -37,9 +37,9 @@ If your CSV has a different layout (e.g., no ID column, different label column),
 The label vector is converted to **0-based consecutive class indices** using `sklearn.preprocessing.LabelEncoder`.
 This ensures labels become `{0, 1, ..., C-1}` even if the original labels are non-consecutive or non-integer.
 
-## Representation dimensions (dataset-dependent rules)
+## Representation dimensions (must be adjusted per dataset)
 
-These dimensions are **not fixed constants** and may change for other datasets.
+The following dimensions are **dataset-dependent** and should be adjusted when you use a different dataset.
 
 - **Local dimensionality reduction (PCA):**  
   Let `D` be the number of feature dimensions used in `X`.  
