@@ -33,18 +33,29 @@ PyTorch 2.9.0 (CPU build)
 
 If you use a newer Python version (e.g., 3.12+), some packages may not provide prebuilt wheels on Windows and installation can fail.
 
-## Recommended: create a conda environment
+## Setup (recommended): conda + environment.yml
+
+This is the most reproducible setup on Windows.
+
+```bash
+conda env create -f environment.yml
+conda activate dccfl310
+```
+
+Then install / confirm dependencies (if needed):
+
+```bash
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+Note: environment.yml already pins the main versions. requirements.txt is kept for pip-based workflows and documentation consistency.
+
+## Setup (alternative): conda + manual Python version
 
 ```bash
 conda create -n dccfl310 python=3.10.19 -y
 conda activate dccfl310
-```
-
-## Requirements
-
-Install dependencies:
-
-```bash
 python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
