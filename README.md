@@ -15,11 +15,37 @@ cd DC-CFL
 
 Download from GitHub: **Code** → **Download ZIP**, then unzip and open the folder.
 
+## Python / environment
+
+This project is tested with:
+
+Python 3.10.19 (recommended: Anaconda / Miniconda environment)
+
+NumPy 1.26.4
+
+pandas 2.3.3
+
+SciPy 1.15.3
+
+scikit-learn 1.7.2
+
+PyTorch 2.9.0 (CPU build)
+
+If you use a newer Python version (e.g., 3.12+), some packages may not provide prebuilt wheels on Windows and installation can fail.
+
+## Recommended: create a conda environment
+
+```bash
+conda create -n dccfl310 python=3.10.19 -y
+conda activate dccfl310
+```
+
 ## Requirements
 
 Install dependencies:
 
 ```bash
+python -m pip install --upgrade pip
 pip install -r requirements.txt
 ```
 
@@ -59,8 +85,31 @@ The following dimensions are **dataset-dependent** and should be adjusted when y
   We set the integrated dimension `d` to the number of singular values satisfying:  
   `S_k >= 1e-2`.
 
-## Run the demo
+## Run the demo (Jupyter)
 
-After placing `data/train.csv`, run:
+After placing data/train.csv, start Jupyter and open the notebook:
 
-- `notebooks/demo_DC-CFL.ipynb`
+```bash
+jupyter lab
+```
+
+Then open:
+
+notebooks/demo_DC-CFL.ipynb
+
+## Note on working directory (important)
+
+Depending on how Jupyter is launched, the notebook's current working directory may be the repository root or the notebooks/ folder.
+The demo notebook includes a small setup cell to automatically move to the repository root so that:
+
+data/train.csv 
+
+can be found reliably.
+
+## Run the experiment pipeline (CLI)
+
+You can also run the experiment pipeline as a Python module from the repository root:
+
+```bash
+python -m src.experiment
+```
