@@ -2,6 +2,11 @@
 
 This repository provides experimental code for DC-CFL style evaluation.
 
+## Paper
+
+- [DOI: 10.48550/arXiv.2601.09304](https://doi.org/10.48550/arXiv.2601.09304)
+- [arXiv:2601.09304](https://arxiv.org/abs/2601.09304)
+
 ## Quick start
 
 ### Option A (recommended): Clone this repository
