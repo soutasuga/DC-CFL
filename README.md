@@ -1,11 +1,22 @@
-# DC-CFL (experimental code)
+# DC-CFL
 
-This repository provides experimental code for DC-CFL style evaluation.
+Official implementation of **"Single-Round Clustered Federated Learning via Data Collaboration Analysis for Non-IID Data"**, accepted at **IJCAI-ECAI 2026**.
 
 ## Paper
 
-- [DOI: 10.48550/arXiv.2601.09304](https://doi.org/10.48550/arXiv.2601.09304)
-- [arXiv:2601.09304](https://arxiv.org/abs/2601.09304)
+- **Venue:** The 35th International Joint Conference on Artificial Intelligence (IJCAI-ECAI 2026)
+- **arXiv:** [arXiv:2601.09304](https://arxiv.org/abs/2601.09304)
+
+### Citation
+
+```bibtex
+@inproceedings{sugawara2026dccfl,
+  title     = {Single-Round Clustered Federated Learning via Data Collaboration Analysis for Non-IID Data},
+  author    = {Sugawara, Sota and Kawamata, Yuji and Toyoda, Akihiro and Nakayama, Tomoru and Okada, Yukihiko},
+  booktitle = {Proceedings of the Thirty-Fifth International Joint Conference on Artificial Intelligence (IJCAI-ECAI 2026)},
+  year      = {2026}
+}
+```
 
 ## Quick start
 
